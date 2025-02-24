@@ -36,7 +36,7 @@
         <button onclick="handleClick()">Submit</button>
     </div>
     <script>
-        const socket = new WebSocket("ws://localhost:9002");
+        const socket = new WebSocket("ws://localhost:9003");
 
         socket.onopen = function () {
             console.log("Connected to WebSocket server");
@@ -52,6 +52,7 @@
 
         socket.onclose = function () {
             console.log("WebSocket connection closed");
+            alert("WebSocket connection closed");
         };
         
         function handleClick() {
